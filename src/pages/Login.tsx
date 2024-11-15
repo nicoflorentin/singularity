@@ -1,4 +1,4 @@
-import { BigButton } from "@/components/buttons"
+import { BigButton } from "@/components/button"
 import { FormInput, FormTitle } from "@/features/form/components"
 import { LoginPresentation } from "@/features/presentations"
 import { useNavigate } from "react-router-dom"

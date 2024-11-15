@@ -9,7 +9,7 @@ export default {
 			},
 			textColor: {
 				foreground: "rgb(88, 88, 88)",
-				onPrimary: "rgb(0, 0, 0)",
+				onPrimary: "rgb(247, 247, 247)",
 				onSecondary: "rgb(255, 255, 255)",
 				surface: "rgb(255, 255, 255)",
 				onSurface: "rgb(0, 0, 0)",

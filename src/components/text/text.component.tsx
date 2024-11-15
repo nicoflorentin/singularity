@@ -1,7 +1,10 @@
 interface TitleProps extends React.HTMLAttributes<HTMLParagraphElement> {
-	children: string
 	size?: "big" | "medium" | "small" | "tiny"
+	className?: string
 }
+
+// hago tipado de children desde la interfaz extendida para poder recibir por parametros etiquetas tales como br o span
+
 const titleSize = (size: string | undefined): string => {
 	switch (size) {
 		case "big":
@@ -17,10 +20,10 @@ const titleSize = (size: string | undefined): string => {
 	}
 }
 
-const Title = ({ children, size, ...props }: TitleProps) => {
+const Title = ({ size, className, ...props }: TitleProps) => {
 	return (
-		<p className={`${titleSize(size)}`} {...props}>
-			{children}
+		<p className={`${titleSize(size)} ${className}`} {...props}>
+			{props.children}
 		</p>
 	)
 }

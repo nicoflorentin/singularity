@@ -1,13 +1,12 @@
-interface BigButtonProps {
+// extiendo la interfaz para que pueda recibir otras props de button tales como onClick o disabled
+interface BigButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	children: string
 	size?: "small" | "medium" | "large"
-	colorClassName?: string
 	className?: string
-	type?: "submit" | "reset" | "button"
 	uppercase?: boolean
 }
 
-const BigButton = ({ children, size, colorClassName, className, type, uppercase, ...props }: BigButtonProps) => {
+const BigButton = ({ children, size, className, type, uppercase, ...props }: BigButtonProps) => {
 	const sizeStylesHandler = () => {
 		switch (size) {
 			case "small":
@@ -15,15 +14,14 @@ const BigButton = ({ children, size, colorClassName, className, type, uppercase,
 			case "medium":
 				return "px-6 py-3 text-base"
 			case "large":
-				return "px-9 py-4 text-lg"
+				return "px-12 py-6 text-lg"
 		}
 	}
 
 	return (
 		<button
-			className={`${className} ${colorClassName} ${sizeStylesHandler()} ${uppercase && "uppercase"}
-			 text-onSecondary rounded-full w-fit min-w-36 font-semibold bg-blue-500 hover:bg-blue-700`}
-			type={type}
+			className={`${className} ${sizeStylesHandler()} ${uppercase && "uppercase"}
+			 text-onSecondary rounded-full w-fit min-w-36 font-semibold bg-blue-500 hover:bg-secondary-dark shadow-bigButton`}
 			{...props}
 		>
 			{children}
@@ -32,4 +30,3 @@ const BigButton = ({ children, size, colorClassName, className, type, uppercase,
 }
 
 export default BigButton
-

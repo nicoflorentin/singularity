@@ -1,8 +1,10 @@
 import { BigButton } from "@/components/buttons"
 import { FormInput, FormTitle } from "@/features/form/components"
-// import React, { useState } from "react"
+import { LoginPresentation } from "@/features/presentations"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
+	const navigate = useNavigate()
 	// const [formData, setFormData] = useState({
 	// 	username: "",
 	// 	password: "",
@@ -10,30 +12,23 @@ const Login = () => {
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault()
-		console.log("Form submitted:", formData)
+		// console.log("Form submitted:", formData)
 	}
 
 	return (
 		<div className='h-screen flex'>
-			{/* Left side - Pattern */}
-			<div className='w-1/2 bg-gray-50'>
-				<svg width='100%' height='100%' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid slice'>
-					<pattern id='pattern' x='0' y='0' width='10' height='10' patternUnits='userSpaceOnUse'>
-						<circle cx='2' cy='2' r='1' fill='currentColor' className='text-gray-200' />
-					</pattern>
-					<rect x='0' y='0' width='100' height='100' fill='url(#pattern)' />
-				</svg>
+			{/* Left side - Presentation */}
+			<div className='w-1/2'>
+				<LoginPresentation />
 			</div>
-
-			{/* Vertical divider */}
-			<div className='w-px bg-gray-200' />
-
 			{/* Right side - Form */}
 			<div className='w-1/2 p-20'>
-				<form onSubmit={handleSubmit} className='h-full flex flex-col justify-center gap-2 w-3/5'>
+				<form onSubmit={handleSubmit} className='h-full flex flex-col justify-center gap-3 w-[500px]'>
 					<FormTitle>Bienvenido</FormTitle>
-					<FormInput type='email' label='EMAIL' id='username' />
-					<FormInput type='password' label='CONTRASEÑA' id='password' />
+					<div className='flex flex-col gap-3'>
+						<FormInput type='email' label='EMAIL' id='username' />
+						<FormInput type='password' label='CONTRASEÑA' id='password' />
+					</div>
 					{/* <input
 								id='username'
 								type='text'
@@ -41,15 +36,32 @@ const Login = () => {
 								onChange={(e) => setFormData({ ...formData, username: e.target.value })}
 							/> */}
 					<div className='text-right my-5 self-end'>
-						<a href='#' className='text-xs text-gray-400 hover:text-gray-600'>
+						<a href='#' className='text-sm text-onBackground hover:text-gray-500'>
 							¿Olvidaste tu contraseña?
 						</a>
 					</div>
-					<BigButton className='mx-auto' size='large' type='submit' uppercase>
-						Iniciar Sesión
-					</BigButton>
+					<div className='flex flex-col gap-6 justify-center'>
+						<BigButton
+							onClick={() => {
+								navigate("/home")
+							}}
+							className='mx-auto'
+							size='large'
+							type='submit'
+							uppercase
+						>
+							Iniciar Sesión
+						</BigButton>
+						<p className='uppercase text-center text-onBackground'>
+							Aún no tengo cuenta{" "}
+							<span>
+								<a className='text-secondary' href=''>
+									registrarse
+								</a>
+							</span>
+						</p>
+					</div>
 				</form>
-				<p className="uppercase">Aun no tengo cuenta <span><a className="text-blue-500" href="">registrarse</a></span></p>
 			</div>
 		</div>
 	)

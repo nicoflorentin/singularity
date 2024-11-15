@@ -3,16 +3,12 @@ import { Home, Login } from "@/pages"
 
 const App = () => {
 	return (
-		<>
-			<div className="text-foreground">
-			
-					<Routes>
-						<Route path='/' element={<Login />} />
-						<Route path='/home' element={<Home />} />
-					</Routes>
-			
+			<div className='text-foreground'>
+				<Routes>
+					<Route path='/' element={<Login />} />
+					<Route path='/home' element={<Home />} />
+				</Routes>
 			</div>
-		</>
 	)
 }
 

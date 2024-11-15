@@ -12,16 +12,16 @@ const FormInput = ({ label, id, ...props }: InputProps) => {
 				{...props}
 				id={id}
 				placeholder=''
-				className='peer w-full h-14 px-4 pt-4 .pb-2 text-gray-800 shadow-input
-        focus:border-gray-500 focus:outline-none bg-transparent'
+				className='peer w-full h-14 px-8 pt-4 .pb-2 text-gray-700 shadow-input
+        focus:border-onBackground focus:outline-none bg-transparent'
 			/>
 			<label
 				htmlFor={id}
-				className='absolute left-4 cursor-text
-        transition-all duration-200 
-        peer-placeholder-shown:text-[14px] peer-placeholder-shown:leading-[1.5] peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-6
-        peer-focus:top-3 peer-focus:text-xs  peer-focus:text-gray-400
-        top-3 text-xs text-gray-400'
+				className='absolute left-8 cursor-text
+        transition-all duration-100 
+        peer-placeholder-shown:text-[18px] peer-placeholder-shown:leading-[1.5] peer-placeholder-shown:text-onBackground peer-placeholder-shown:top-5
+        peer-focus:top-2 peer-focus:text-sm  peer-focus:text-onBackground
+        top-2 text-sm text-onBackground'
 			>
 				{label}
 			</label>

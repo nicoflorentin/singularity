@@ -1,50 +1,58 @@
-# React + TypeScript + Vite
+Este proyecto es una aplicación en React que utiliza `react-router-dom` y `react-cookie` para gestionar rutas protegidas y autenticación basada en cookies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Screencast from 2024-11-16 19-47-34.webm](https://github.com/user-attachments/assets/8b64e03c-4424-4569-9263-14d1338c076a)
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalados los siguientes programas en tu máquina:
 
-## Expanding the ESLint configuration
+- **Node.js** (v16 o superior recomendado)
+- **npm** (gestor de paquetes)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Pasos para Levantar el Proyecto
 
-- Configure the top-level `parserOptions` property like this:
+Sigue estos pasos para clonar y levantar el proyecto en tu máquina local.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clonar el Repositorio
+
+Primero, clona el repositorio en tu máquina usando Git:
+
+```bash
+git clone https://github.com/nicoflorentin/singularity
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Entrar en la Carpeta del Proyecto
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Navega al directorio del proyecto clonado:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+cd singularity
 ```
+
+### 3. Instalar las Dependencias
+
+Instala todas las dependencias necesarias utilizando npm:
+
+```bash
+npm install
+```
+
+Este comando descargará e instalará todas las dependencias definidas en el archivo `package.json` del proyecto.
+
+### 4. Iniciar el Proyecto en Modo Desarrollo
+
+Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+
+```bash
+npm run dev
+```
+
+Esto ejecutará el proyecto en modo de desarrollo y deberías ver algo similar a esto:
+
+> nombre-del-proyecto@1.0.0 dev
+> react-scripts start
+
+### 5. Acceder a la Aplicación
+
+Abre tu navegador y visita la URL:
+http://localhost:3000

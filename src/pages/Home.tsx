@@ -13,7 +13,7 @@ const Home = () => {
 				<div className='relative flex flex-col z-10 h-full'>
 					<NavBar />
 					<section className='flex grow items-center px-32'>
-						<div className='flex flex-col gap-8 w-1/2 text-onPrimary'>
+						<div className='flex flex-col gap-8 text-onPrimary'>
 							<Title>We Get Pet Care!</Title>
 							<Text className='w-[550px]' size='medium'>
 								For over 17 years, Fetch! Pet Care has been a trusted partner in keeping pets healthy and

@@ -38,8 +38,8 @@ const zipSectionData = {
 
 const OurServices = () => {
 	return (
-		<div className='h-[90vh] flex justify-around'>
-			<img className='absolute -translate-y-[100px] w-full' src={azul} alt='' />
+		<section className='h-[90vh] flex justify-around'>
+			<img className='absolute -translate-y-[100px] w-[1900px] min-w-[1300px]' src={azul} alt='' />
 			<div className='relative z-10 flex flex-col justify-center h-full'>
 				<ZipCodeSection
 					subtitle='Our Services'
@@ -48,13 +48,13 @@ const OurServices = () => {
 				/>
 			</div>
 			<div className='relative flex items-center text-black'>
-				<div className='flex flex-wrap w-[700px] justify-center gap-9'>
+				<div className='flex flex-wrap max-w-[700px] justify-center gap-9'>
 					{cardsData.map((card) => (
 						<OurServicesCard key={card.key} label={card.label} imageURL={card.imageURL} />
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

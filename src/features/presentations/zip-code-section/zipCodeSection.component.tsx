@@ -1,14 +1,8 @@
 import { ArrowInput } from "@/components/input"
 import { SubTitle, Text } from "@/components/text"
-import React from "react"
+import { ZipCodeSectionData } from "@/types/interfaces"
 
-interface ZipCodeSectionProps {
-	subtitle: string
-	content1: React.ReactNode
-	content2: React.ReactNode
-}
-
-const ZipCodeSection = ({ subtitle, content1, content2 }: ZipCodeSectionProps) => {
+const ZipCodeSection = ({ subtitle, content1, content2 }: ZipCodeSectionData) => {
 	return (
 		<div className='relative flex flex-col gap-10 w-[500px] '>
 			<SubTitle className='text-primary'>
@@ -23,7 +17,7 @@ const ZipCodeSection = ({ subtitle, content1, content2 }: ZipCodeSectionProps) =
 				{/* Enter Your Location and Fetch Our Services */}
 				{content2}
 			</Text>
-			<ArrowInput />
+			<ArrowInput placeholder="Zip Code" />
 		</div>
 	)
 }

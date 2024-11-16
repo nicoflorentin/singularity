@@ -3,7 +3,7 @@ import { Text } from "@/components/text"
 
 const OwnerCard = () => {
 	return (
-		<div className='flex flex-col items-center gap-7 p-8 bg-secondary w-[700px] rounded-3xl text-onSecondary'>
+		<div className='flex flex-col items-center gap-7 p-8 bg-secondary w-[600px] rounded-3xl text-onSecondary'>
 			<img className='h-28' src={owner} alt='' />
 			<Text size="big">Kenned Dsouza</Text>
 			<Text size="medium" className="text-center">

@@ -4,7 +4,7 @@ import { OwnerCard } from "@/features/presentations"
 
 const Owners = () => {
 	return (
-		<div className='flex flex-col gap-20 mt-44 relative h-[90vh]'>
+		<section className='z-0 flex flex-col gap-20 mt-44 relative h-[90vh]'>
 			<SubTitle className='text-primary text-center leading-normal'>
 				Here's what pet owners have to <br /> say about Fetch! Pet Care...
 			</SubTitle>
@@ -13,7 +13,7 @@ const Owners = () => {
 				<OwnerCard />
 				<Arrow />
 			</div>
-		</div>
+		</section>
 	)
 }
 

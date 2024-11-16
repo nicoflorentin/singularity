@@ -21,7 +21,7 @@ const BigButton = ({ children, size, className, uppercase, ...props }: BigButton
 	return (
 		<button
 			className={`${className} ${sizeStylesHandler()} ${uppercase && "uppercase"}
-			 text-onSecondary rounded-full w-fit min-w-36 font-semibold bg-blue-500 hover:bg-secondary-dark shadow-bigButton`}
+			 text-onSecondary rounded-full w-fit min-w-36 font-semibold bg-blue-500 hover:bg-secondary-dark shadow-bigButton disabled:opacity-60`}
 			{...props}
 		>
 			{children}

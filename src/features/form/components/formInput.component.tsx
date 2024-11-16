@@ -11,6 +11,7 @@ const FormInput = ({ label, id, ...props }: InputProps) => {
 			<input
 				{...props}
 				id={id}
+				value={props.value}
 				placeholder=''
 				className='peer w-full h-14 px-8 pt-4 .pb-2 text-gray-700 shadow-input
         focus:border-onBackground focus:outline-none bg-transparent'

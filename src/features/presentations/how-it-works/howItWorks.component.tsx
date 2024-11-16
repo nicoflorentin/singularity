@@ -2,7 +2,7 @@ import { OurServicesCard, ZipCodeSection } from "@/features/presentations"
 import relax from "@/assets/relax.png"
 import veterinarian from "@/assets/veterinarian.png"
 import calendar from "@/assets/calendar.png"
-import { CardData, ZipCodeSectionData } from "@/types/interfaces"
+import { CardData, ZipCodeSectionData } from "@/types/presentations"
 import path from "@/assets/path.webp"
 
 const zipCodeSectionData: ZipCodeSectionData = {

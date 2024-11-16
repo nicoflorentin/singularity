@@ -11,7 +11,7 @@ const SubTitle = ({ children, className, size, ...props }: SubTitleProps) => {
 			case "medium":
 				return "text-4xl"
 			case "large":
-				return "text-5xl"
+				return "text-6xl"
 			default:
 				return "text-5xl"
 		}

@@ -1,33 +1,22 @@
-import { BigButton } from "@/components/button"
-import { Text, Title } from "@/components/text"
 import { DogCard, Footer, NavBar, OurServices, Owners } from "@/features/presentations"
 import above from "../assets/above.svg"
 import circleDog from "../assets/circle-dog.webp"
 import { HowItWorks } from "@/features/presentations"
+import { Outlet } from "react-router-dom"
 
 const Home = () => {
 	return (
-		<div className="overflow-hidden">
+		<div className='overflow-hidden'>
 			<div className='relative h-screen'>
 				<img className='absolute min-w-[1500px] w-full' src={above} alt='' />
 				<div className='relative flex flex-col z-10 h-full'>
 					<NavBar />
-					<section className='flex grow items-center px-32'>
-						<div className='flex flex-col gap-8 text-onPrimary'>
-							<Title>We Get Pet Care!</Title>
-							<Text className='w-[550px]' size='medium'>
-								For over 17 years, Fetch! Pet Care has been a trusted partner in keeping pets healthy and
-								happy!
-							</Text>
-							<div className='flex gap-8 items-center'>
-								<BigButton size='medium' type='submit'>
-									Schedule a Service
-								</BigButton>
-								<Text size='small'>Or Call 866.338.2463</Text>
-							</div>
+					<section className='flex grow items-center justify-around'>
+						<div className='self-end mb-[15%]'>
+							<Outlet />
 						</div>
-						<div className='w-1/2 flex justify-center relative left-[100px]'>
-							<img src={circleDog} alt='' />
+						<div className=' flex justify-center relative'>
+							<img className='max-w-[600px]' src={circleDog} alt='' />
 						</div>
 					</section>
 				</div>

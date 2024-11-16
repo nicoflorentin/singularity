@@ -29,7 +29,7 @@ const Footer = () => {
 
 	return (
 		<div className='relative h-[500px] flex justify-around'>
-			<img className="z-0 absolute min-w-[1500px] bottom-0" src={footer} alt="" />
+			<img className="z-0 absolute min-w-[1500px] h-[500px] bottom-0" src={footer} alt="" />
 			{FooterContent.map((config, index) => (
 				<FooterList key={index} title={config.title} links={config.links} />
 			))}

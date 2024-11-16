@@ -1,6 +1,6 @@
 import { ArrowInput } from "@/components/input"
 import { SubTitle, Text } from "@/components/text"
-import { ZipCodeSectionData } from "@/types/interfaces"
+import { ZipCodeSectionData } from "@/types/presentations"
 
 const ZipCodeSection = ({ subtitle, content1, content2 }: ZipCodeSectionData) => {
 	return (

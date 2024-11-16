@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
 interface NavlinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
-	children?: string
 	navigateTo?: string
 }
 

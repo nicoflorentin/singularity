@@ -1,8 +1,9 @@
 import { BigButton } from "@/components/button"
 import { Text, Title } from "@/components/text"
-import { NavBar, OurServices } from "@/features/presentations"
+import { NavBar, OurServices, Owners } from "@/features/presentations"
 import above from "../assets/above.svg"
 import circleDog from "../assets/circle-dog.webp"
+import { HowItWorks } from "@/features/presentations"
 
 const Home = () => {
 	return (
@@ -32,6 +33,8 @@ const Home = () => {
 				</div>
 			</div>
 			<OurServices />
+			<Owners />
+			<HowItWorks />
 		</div>
 	)
 }

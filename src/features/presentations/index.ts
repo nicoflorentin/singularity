@@ -1,3 +1,8 @@
-export {default as LoginPresentation} from './loginPresentation.component'
-export {default as NavBar} from './homeNavbar.component'
-export {default as OurServices} from './ourServices.component'
+export { default as LoginPresentation } from "./loginPresentation.component"
+export { default as NavBar } from "./homeNavbar.component"
+export { default as OurServices } from "./our-services/ourServices.component"
+export { default as OurServicesCard } from "./our-services/ourServicesCard.component"
+export { default as Owners } from "./owners/owners.component"
+export { default as OwnerCard } from "./owners/ownerCard.component"
+export { default as ZipCodeSection } from "./zip-code-section/zipCodeSection.component"
+export { default as HowItWorks } from "./how-it-works/howItWorks.component"
